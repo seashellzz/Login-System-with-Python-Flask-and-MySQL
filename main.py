@@ -88,14 +88,7 @@ def register():
 # http://localhost:5000/pythinlogin/home 
 # This will be the home page, only accessible for loggedin users
 
-@app.route('/')
-def home():
-    # Check if user is loggedin
-    if 'loggedin' in session:
-        # User is loggedin show them the home page
-        return render_template('home/home.html', username=session['username'],title="Home")
-    # User is not loggedin redirect to login page
-    return redirect(url_for('login'))    
+
 
 
 @app.route('/profile')
